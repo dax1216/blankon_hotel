@@ -1,0 +1,13 @@
+services:
+  django: &django
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./:/app/
+      - ./.env:/app/.env
+    ports:
+      - 8000:8000
+    env_file:
+      - ./.env
+    command: /start
