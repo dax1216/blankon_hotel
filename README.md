@@ -19,13 +19,18 @@ docker compose down --volumes && docker compose up -d
 ## Basic Commands
 ### Create superuser (optional)
 ```bash
-docker exec -it service bash
+docker exec -it provider.local bash
 python manage.py createsuperuser
 ```
 ### Import data sample (optional)
 ```bash
-docker exec -it service bash
+docker exec -it provider.local bash
 python manage.py runscript apps.hotel.import_data
+```
+### Run pytest
+```bash
+docker exec -it provider.local bash
+pytest --no-header -v
 ```
 ### Run linting, flake8, and isort
 ```bash
