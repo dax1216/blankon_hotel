@@ -19,12 +19,12 @@ docker compose down --volumes && docker compose up -d
 ## Basic Commands
 ### Create superuser (optional)
 ```bash
-docker exec -it blankon_hotel-django bash
+docker exec -it blankon_hotel-django-1 bash
 python manage.py createsuperuser
 ```
 ### Import data sample (optional)
 ```bash
-docker exec -it blankon_hotel-django bash
+docker exec -it blankon_hotel-django-1 bash
 python manage.py runscript import_data
 ```
 ### Run linting, flake8, and isort
