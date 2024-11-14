@@ -11,6 +11,7 @@ pyenv virtualenv 3.12.2 blankon_hotel-py3.12.2
 pyenv activate blankon_hotel-py3.12.2  # do this every time you start working on this project
 cp env-sample .env
 pip install -r requirements.txt
+docker network create my_network
 docker compose down --volumes && docker compose up -d
 ```
 ## Contributing
