@@ -33,5 +33,7 @@ RUN chmod +x /start
 # copy project
 COPY . /app
 
+EXPOSE 8000
+
 # run entrypoint
 CMD ["/start"]

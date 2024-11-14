@@ -3,6 +3,9 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
+    container_name: provider.local
+    networks:
+      - my_network
     volumes:
       - ./:/app/
       - ./.env:/app/.env
@@ -11,3 +14,7 @@ services:
     env_file:
       - ./.env
     command: /start
+
+networks:
+  my_network:
+    external: true

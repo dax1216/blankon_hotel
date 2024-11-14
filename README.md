@@ -19,13 +19,13 @@ docker compose down --volumes && docker compose up -d
 ## Basic Commands
 ### Create superuser (optional)
 ```bash
-docker exec -it blankon_hotel-django-1 bash
+docker exec -it service bash
 python manage.py createsuperuser
 ```
 ### Import data sample (optional)
 ```bash
-docker exec -it blankon_hotel-django-1 bash
-python manage.py runscript import_data
+docker exec -it service bash
+python manage.py runscript apps.hotel.import_data
 ```
 ### Run linting, flake8, and isort
 ```bash
@@ -33,5 +33,5 @@ pre-commit install
 pre-commit run --all-files
 ```
 ## Using the app
-* Open your browser and go to http://localhost:8000/api/v1/swagger/
+* Open your browser and go to http://localhost:8000/api/v1/schema/swagger/
 * Test existing endpoints
