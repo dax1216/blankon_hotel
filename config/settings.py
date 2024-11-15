@@ -36,7 +36,7 @@ SECRET_KEY = env("DJANGO_SECRET_KEY", default="django-secret-key")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env("DEBUG", default=False)
 
-ALLOWED_HOSTS = ["provider.local", "localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["provider.local", "localhost", "127.0.0.1", "host.docker.internal"]
 
 
 # Application definition
